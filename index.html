@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Matic Kadiš</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #1f1f1f;
+      color: #ffffff;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+    }
+    .sidebar {
+      width: 280px;
+      background: #2b2b2b;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .sidebar img {
+      width: 120px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .sidebar h1 {
+      font-size: 1.4rem;
+      margin: 0.5rem 0;
+    }
+    .sidebar p {
+      color: #aaa;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+    .info {
+      font-size: 0.85rem;
+      color: #ccc;
+      margin-bottom: 1rem;
+      text-align: left;
+      width: 100%;
+    }
+    .info div {
+      margin: 0.5rem 0;
+    }
+    .main {
+      flex-grow: 1;
+      padding: 3rem;
+    }
+    .main h2 {
+      border-left: 4px solid #ffc107;
+      padding-left: 0.5rem;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #2c2c2c;
+      padding: 1.5rem;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .card h3 {
+      margin: 0;
+      color: #ffc107;
+      font-size: 1.1rem;
+    }
+    .card p {
+      color: #bbb;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <img src="assets/images/avatar.png" alt="Avatar" />
+      <h1>Matic Kadiš</h1>
+      <p>Role/Field</p>
+      <div class="info">
+        <div>Email: example@example.com</div>
+        <div>Phone: +000000000</div>
+        <div>Location: City, Country</div>
+      </div>
+    </div>
+    <div class="main">
+      <h2>About Me</h2>
+      <p>[About section placeholder]</p>
+
+      <h2>What I'm Doing</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Category 1</h3>
+          <p>Description placeholder</p>
+        </div>
+        <div class="card">
+          <h3>Category 2</h3>
+          <p>Description placeholder</p>
+        </div>
+        <div class="card">
+          <h3>Category 3</h3>
+          <p>Description placeholder</p>
+        </div>
+        <div class="card">
+          <h3>Category 4</h3>
+          <p>Description placeholder</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
