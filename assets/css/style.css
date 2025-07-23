@@ -24,7 +24,7 @@ a:hover {
   color: #ffffff;
 }
 
-/* Header */
+/* Header (used on all pages) */
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -51,7 +51,7 @@ a:hover {
   background-color: #333;
 }
 
-/* Identity */
+/* Identity block */
 .identity h1 {
   font-size: 1.25rem;
 }
@@ -61,12 +61,11 @@ a:hover {
   color: #aaa;
 }
 
-/* Navigation */
+/* Navigation menu */
 .nav ul {
   list-style: none;
   display: flex;
   gap: 2rem;
-  padding-top: 0.5rem;
 }
 
 .nav li a {
@@ -74,13 +73,13 @@ a:hover {
   padding: 0.5rem;
 }
 
-/* Highlight active nav link */
+/* Highlight active page */
 .nav a.active {
   color: #ffffff;
   border-bottom: 2px solid #facc15;
 }
 
-/* Main content (home) */
+/* Home (main) content */
 .main {
   max-width: 1100px;
   margin: 2rem auto;
@@ -123,28 +122,7 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
-/* Page layout for subpages */
-.page-content {
-  max-width: 700px;
-  margin: 4rem auto;
-  font-family: 'Poppins', sans-serif;
-  padding: 0 1rem;
-  color: #ddd;
-}
-
-
-/* Top header layout for all pages */
-.header {
-  background-color: #121212;
-  padding: 1.5rem 3rem;
-  border-bottom: 1px solid #333;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-/* Optional heading section title style */
+/* Subpage content layout */
 .page-title {
   font-size: 1.8rem;
   font-weight: bold;
@@ -158,6 +136,6 @@ a:hover {
   max-width: 1100px;
   margin: 2rem auto;
   padding: 0 2rem;
-  font-family: 'Poppins', sans-serif;
   color: #ddd;
+  font-family: 'Poppins', sans-serif;
 }
