@@ -1,21 +1,40 @@
-/* assets/css/style.css */
-
-body {
+/* Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
   font-family: 'Poppins', sans-serif;
   background-color: #1e1e1e;
   color: #ffffff;
+  line-height: 1.6;
 }
 
+/* Links */
+a {
+  text-decoration: none;
+  color: #facc15;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+/* Header */
 .topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2a2a2a;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem 3rem;
+  background-color: #121212;
+  border-bottom: 1px solid #333;
+  flex-wrap: wrap;
 }
 
+/* Avatar and profile */
 .profile {
   display: flex;
   align-items: center;
@@ -23,65 +42,77 @@ body {
 }
 
 .avatar {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  background-color: #444;
+  flex-shrink: 0;
+  background-color: #333;
 }
 
-.name-role h1 {
-  margin: 0;
+/* Identity */
+.identity h1 {
   font-size: 1.25rem;
 }
 
-.name-role p {
-  margin: 0;
-  font-size: 0.875rem;
-  color: #ccc;
+.identity p {
+  font-size: 0.9rem;
+  color: #aaa;
 }
 
-.nav a {
-  margin-left: 1rem;
-  color: #fcd535;
-  text-decoration: none;
+/* Navigation */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding-top: 0.5rem;
+}
+
+.nav li a {
   font-weight: 500;
+  padding: 0.5rem;
+  transition: color 0.3s;
 }
 
-.nav a:hover {
-  text-decoration: underline;
-}
-
+/* Main content */
 .main {
-  padding: 2rem;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 2rem;
 }
 
-h2 {
-  border-left: 4px solid #fcd535;
-  padding-left: 0.75rem;
-  margin-top: 2rem;
+/* Section titles */
+.section {
+  margin-bottom: 3rem;
+}
+
+.section h2 {
+  font-size: 1.8rem;
   margin-bottom: 1rem;
+  border-left: 4px solid #facc15;
+  padding-left: 0.75rem;
 }
 
+/* Card grid layout */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
 .card {
-  background-color: #2b2b2b;
+  background-color: #2a2a2a;
+  padding: 1.5rem;
   border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  background-color: #333333;
 }
 
 .card h3 {
-  margin: 0;
-  color: #fcd535;
-}
-
-.card p {
-  margin-top: 0.5rem;
-  color: #ccc;
+  color: #facc15;
+  margin-bottom: 0.5rem;
 }
