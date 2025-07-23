@@ -17,6 +17,7 @@ body {
 a {
   text-decoration: none;
   color: #facc15;
+  transition: color 0.3s;
 }
 
 a:hover {
@@ -71,10 +72,15 @@ a:hover {
 .nav li a {
   font-weight: 500;
   padding: 0.5rem;
-  transition: color 0.3s;
 }
 
-/* Main content */
+/* Highlight active nav link */
+.nav a.active {
+  color: #ffffff;
+  border-bottom: 2px solid #facc15;
+}
+
+/* Main content (home) */
 .main {
   max-width: 1100px;
   margin: 2rem auto;
@@ -104,7 +110,7 @@ a:hover {
   background-color: #2a2a2a;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
   transition: background-color 0.3s ease;
 }
 
@@ -115,4 +121,13 @@ a:hover {
 .card h3 {
   color: #facc15;
   margin-bottom: 0.5rem;
+}
+
+/* Page layout for subpages */
+.page-content {
+  max-width: 700px;
+  margin: 4rem auto;
+  font-family: 'Poppins', sans-serif;
+  padding: 0 1rem;
+  color: #ddd;
 }
