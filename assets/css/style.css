@@ -131,3 +131,33 @@ a:hover {
   padding: 0 1rem;
   color: #ddd;
 }
+
+
+/* Top header layout for all pages */
+.header {
+  background-color: #121212;
+  padding: 1.5rem 3rem;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Optional heading section title style */
+.page-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 2rem auto 1rem auto;
+  border-left: 4px solid #facc15;
+  padding-left: 0.75rem;
+  max-width: 1100px;
+}
+
+.page-content {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  font-family: 'Poppins', sans-serif;
+  color: #ddd;
+}
