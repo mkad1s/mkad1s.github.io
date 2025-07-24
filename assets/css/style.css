@@ -24,7 +24,7 @@ a:hover {
   color: #ffffff;
 }
 
-/* Header (used on all pages) */
+/* Header */
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -35,7 +35,6 @@ a:hover {
   flex-wrap: wrap;
 }
 
-/* Avatar and profile */
 .profile {
   display: flex;
   align-items: center;
@@ -51,7 +50,6 @@ a:hover {
   background-color: #333;
 }
 
-/* Identity block */
 .identity h1 {
   font-size: 1.25rem;
 }
@@ -61,7 +59,7 @@ a:hover {
   color: #aaa;
 }
 
-/* Navigation menu */
+/* Navigation */
 .nav ul {
   list-style: none;
   display: flex;
@@ -78,7 +76,6 @@ a:hover {
   border-bottom: 2px solid #facc15;
 }
 
-/* Toggle Button */
 .nav-toggle {
   display: none;
   font-size: 2rem;
@@ -88,14 +85,13 @@ a:hover {
   cursor: pointer;
 }
 
-/* Main content wrapper */
+/* Page layout */
 .main {
   max-width: 1100px;
   margin: 2rem auto;
   padding: 0 2rem;
 }
 
-/* Section titles */
 .section {
   margin-bottom: 3rem;
 }
@@ -107,10 +103,16 @@ a:hover {
   padding-left: 0.75rem;
 }
 
-/* Card grid */
+/* Card styles */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card-grid.vertical {
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
 }
 
@@ -122,6 +124,10 @@ a:hover {
   transition: background-color 0.3s ease;
 }
 
+.card.full {
+  width: 100%;
+}
+
 .card:hover {
   background-color: #333333;
 }
@@ -131,7 +137,7 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
-/* Subpage content */
+/* Subpage styling */
 .page-title {
   font-size: 1.8rem;
   font-weight: bold;
@@ -146,6 +152,43 @@ a:hover {
   margin: 2rem auto;
   padding: 0 2rem;
   color: #ddd;
+}
+
+/* Dropdown support (for future) */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  z-index: 1000;
+  min-width: 180px;
+  flex-direction: column;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #facc15;
+}
+
+.dropdown-menu a:hover {
+  background-color: #333;
 }
 
 /* Responsive styles */
@@ -205,6 +248,25 @@ a:hover {
   .page-content,
   .main {
     padding: 0 1rem;
+  }
+
+  .dropdown-menu {
+    position: static;
+    display: none;
+    padding-left: 1rem;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: flex;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+  .drop-trigger::after {
+    content: \" ▼\";
+    font-size: 0.75rem;
   }
 }
 
