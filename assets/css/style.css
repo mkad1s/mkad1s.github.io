@@ -73,13 +73,22 @@ a:hover {
   padding: 0.5rem;
 }
 
-/* Highlight active page */
 .nav a.active {
   color: #ffffff;
   border-bottom: 2px solid #facc15;
 }
 
-/* Home (main) content */
+/* Toggle Button */
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #facc15;
+  cursor: pointer;
+}
+
+/* Main content wrapper */
 .main {
   max-width: 1100px;
   margin: 2rem auto;
@@ -98,7 +107,7 @@ a:hover {
   padding-left: 0.75rem;
 }
 
-/* Card grid layout */
+/* Card grid */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -122,7 +131,7 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
-/* Subpage content layout */
+/* Subpage content */
 .page-title {
   font-size: 1.8rem;
   font-weight: bold;
@@ -137,5 +146,82 @@ a:hover {
   margin: 2rem auto;
   padding: 0 2rem;
   color: #ddd;
-  font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .profile {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .nav-toggle {
+    display: block;
+    margin-left: auto;
+    margin-right: 2rem;
+  }
+
+  .nav {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    padding: 1rem 2rem;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .avatar {
+    width: 64px;
+    height: 64px;
+  }
+
+  .identity h1 {
+    font-size: 1.1rem;
+  }
+
+  .identity p {
+    font-size: 0.8rem;
+  }
+
+  .page-title,
+  .page-content,
+  .main {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .identity h1 {
+    font-size: 1rem;
+  }
+
+  .identity p {
+    font-size: 0.75rem;
+  }
+
+  .nav li a {
+    font-size: 0.9rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
 }
