@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-  <!-- Topbar with avatar and navigation -->
-   <header class="topbar">
-    <div class="profile"></div>
-    <nav class="nav">
+  <header class="topbar">
+    <div class="profile">
+      <!-- avatar is only in index, not used here -->
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <nav class="nav" id="nav">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
         <li><a href="publications.html">Publications</a></li>
         <li><a href="tbd.html">TBD</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Page content -->
   <main class="page-content">
     <h2 class="page-title">About Me</h2>
     <p>
@@ -32,5 +34,12 @@
     </p>
   </main>
 
+  <script>
+    const toggleBtn = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('nav');
+    toggleBtn.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
